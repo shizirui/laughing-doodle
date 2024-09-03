@@ -1,0 +1,53 @@
+[
+    {
+        "name": "三月七",
+        "tagImageUrl" : "https://bbs-static.miyoushe.com/communityweb/upload/9b3ba0955f25001047823e3ad904c87d.png",
+        "type" : "character",
+        "value" : {
+            "mingtu" : "存护",
+            "shuxing" : "冰",
+            "shengmingzhi" : 1058,
+            "gongjili" : 512,
+            "fangyuli" : 573,
+            "sudu" : 101
+        }
+    },
+    {
+        "name": "丹恒",
+        "tagImageUrl" : "https://bbs-static.miyoushe.com/communityweb/upload/bc0bd4bbc6da6ab930f64652868a033f.png",
+        "type":"character",
+        "value" :{
+            "mingtu":"巡猎",
+            "shuxing" : "风",
+            "gongjifangshi" : "zhishang",
+            "shengmingzhi" : 882,
+            "gongjili" : 547,
+            "fangyuli" : 397,
+            "sudu" : 110
+        },
+        "jineng" :{
+            "zhanji":{
+                "beilv":2.6
+            },
+            "zhongjieji" :{
+                "beilv" : 5.2
+            }
+        },
+        "tianfu":{
+            "all":{
+                "kangxing" : 0.36
+            }
+        },
+        "mingzuo":{
+            "1" : {
+                "baojilv" : 12
+            },
+            "2" :{
+
+            },
+            "3" :{
+
+            }
+        }
+    }
+]

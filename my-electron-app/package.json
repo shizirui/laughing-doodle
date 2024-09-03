@@ -1,0 +1,23 @@
+{
+  "name": "my-electron-app",
+  "version": "1.0.0",
+  "description": "To scan and select useful equip",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "chcp 65001 && electron ."
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "no"
+  },
+  "keywords": [
+    "123"
+  ],
+  "author": "shizirui",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^31.2.1"
+  }
+}

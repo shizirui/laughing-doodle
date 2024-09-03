@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 150px;
+    background-color: rgb(247, 245, 245);
+    color: rgb(255, 255, 255);
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 垂直居中 */
+}
+
+.menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    margin: 0;
+}
+
+.menu a {
+    display: block;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    background-color: #c0c0c0;
+}
+
+.content {
+    margin-left: 150px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: calc(100vw - 150px);
+}
+
+.top-content, .bottom-content, .setting-content,.top-left-content,.top-right-content, .yiqi, .yiqi-left, .yiqi-right{
+    flex: 1;
+    padding: 20px;
+    overflow: auto;
+}
+
+.top-content, .yiqi {
+    background-color: #ffffff;
+    display: flex;
+}
+
+.bottom-content {
+    background-color: #e0e0e0;
+}
+
+@keyframes button1 {
+    0%{
+        background-color: #f4f4f4;
+    }
+    100%{
+        background-color: rgb(205, 205, 205);
+    }
+}
+
+.button {
+    border-radius: 50px;
+    font-size: 20px;
+    overflow: hidden;
+    border: none;
+    margin: 10px;
+    margin-left: 0px;
+}
+
+.button:hover {
+    animation: button1 0.2s forwards;
+}
+
+.top-left-content{
+    margin: 0px;
+    padding: 0px;
+}
+
+.top-right-content{
+    margin-left: 0px;
+    padding: 0px;
+}
+
+img.hidden{
+    display: none;
+}

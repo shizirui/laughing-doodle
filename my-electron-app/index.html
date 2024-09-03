@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>崩铁遗器检查o.0</title>
+    <link rel="stylesheet" href="ceshi.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <ul class="menu">
+                <li><a href="#" onclick="">首页</a></li>
+                <li><a href="#" onclick="loadPage()">设置</a></li>
+            </ul>
+        </aside>
+        <div id="yiqi"></div>
+        <div class="content">
+            <meta charset="UTF-8">
+            <div class="top-content">
+                <div class="top-left-content">
+                    <h1>扫描部分</h1>
+                    <button class="button" id="scanButton" onclick="scanning()">开始扫描</button>
+                </div>
+                <div class="top-right-content" id="yiqi">
+            </div>
+            <div class="bottom-content">
+                <h1>结果</h1>
+                <div id="output-place">
+                    <div id="output">
+                        <pre id="json-output"></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        function loadPage(){
+            window.location.href = 'setting.html';
+        }
+
+        window.onload = function() {
+        };
+
+        function scanning() {
+            const scans = document.getElementById('scanButton');
+            if (scans.innerText === '开始扫描') {
+                scans.innerText = '停止扫描';
+                window.electronAPI.startPython('start');
+            } else {
+                scans.innerText = '开始扫描';
+                window.electronAPI.startPython('stop');
+                const outputElement = document.getElementById('json-output');
+                outputElement.textContent = '';
+            }
+        }
+
+        window.electronAPI.onPythonData((data) => {
+            const outputdata = document.getElementById('json-output');
+            outputdata.innerText = JSON.stringify(data,null,2);
+        })
+    </script>
+</body>
+</html>
